@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
         isGameStarted = true;
         PlayerController newPlayer = Instantiate(controllerPlayer);
         newPlayer.transform.position = startTransform.position;
+        newPlayer.transform.position = startTransform.position;
         CameraController.instance.SetTarget(newPlayer.transform);
         CameraController.instance.ChangeCamPos();
         StartCoroutine(LevelSpawner());
