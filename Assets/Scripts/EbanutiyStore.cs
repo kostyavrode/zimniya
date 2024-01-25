@@ -46,7 +46,7 @@ public class EbanutiyStore : MonoBehaviour
             PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") - 100);
             PlayerPrefs.Save();
             CheckBuying();
-            UIController.instance.ShowMoney(PlayerPrefs.GetInt("money").ToString());
+            UIManager.instance.ShowMoney(PlayerPrefs.GetInt("money").ToString());
         }
     }
     public void Purchase2()
@@ -57,7 +57,7 @@ public class EbanutiyStore : MonoBehaviour
             PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") - 100);
             PlayerPrefs.Save();
             CheckBuying();
-            UIController.instance.ShowMoney(PlayerPrefs.GetInt("money").ToString());
+            UIManager.instance.ShowMoney(PlayerPrefs.GetInt("money").ToString());
         }
     }
     public void Purchase3()
@@ -68,7 +68,7 @@ public class EbanutiyStore : MonoBehaviour
             PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") - 100);
             PlayerPrefs.Save();
             CheckBuying();
-            UIController.instance.ShowMoney(PlayerPrefs.GetInt("money").ToString());
+            UIManager.instance.ShowMoney(PlayerPrefs.GetInt("money").ToString());
         }
     }
     public void Purchase4()
@@ -79,7 +79,7 @@ public class EbanutiyStore : MonoBehaviour
             PlayerPrefs.SetInt("money", PlayerPrefs.GetInt("money") - 100);
             PlayerPrefs.Save();
             CheckBuying();
-            UIController.instance.ShowMoney(PlayerPrefs.GetInt("money").ToString());
+            UIManager.instance.ShowMoney(PlayerPrefs.GetInt("money").ToString());
         }
     }
 }

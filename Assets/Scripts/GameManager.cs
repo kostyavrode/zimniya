@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-            UIController.instance.ShowMoney(PlayerPrefs.GetInt("money").ToString());
+            UIManager.instance.ShowMoney(PlayerPrefs.GetInt("money").ToString());
         }
     public void StartGame()
     {
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log(isGameStarted);
             score++;
-            UIController.instance.ShowScore(score.ToString());
+            UIManager.instance.ShowScore(score.ToString());
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         isGameStarted = false;
-        UIController.instance.ShowLosePanel();
+        UIManager.instance.ShowLosePanel();
         CheckBestScore();
     }
     private void CheckBestScore()
@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("BestScore", score);
             PlayerPrefs.Save();
         }
-        UIController.instance.ShowBestScore((PlayerPrefs.GetInt("BestScore").ToString()));
+        UIManager.instance.ShowBestScore((PlayerPrefs.GetInt("BestScore").ToString()));
     }
     private void CreateLevelPart()
     {
